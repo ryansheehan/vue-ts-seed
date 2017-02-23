@@ -1,6 +1,8 @@
 import * as Vue from 'vue';
 import * as Vuex from 'vuex';
+import {sync} from 'vuex-router-sync';
 import {StoreOptions, MutationTree} from 'vuex';
+import router from '../router';
 
 Vue.use(Vuex);
 
@@ -25,5 +27,7 @@ const store = new Vuex.Store({
     }
   }
 });
+
+sync(store, router);
 
 export default store;
