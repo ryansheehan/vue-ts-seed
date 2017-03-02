@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import * as Vue from 'vue';
+import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
 import Counter from '../components/counter.component.vue';
 
@@ -14,7 +14,7 @@ import Counter from '../components/counter.component.vue';
 })
 export default class CounterLayout extends Vue {
   get value() {
-    return this.$store.state.count
+    return this.$store.state.counter.count
   }
   increment() {
     this.$store.dispatch('increment');

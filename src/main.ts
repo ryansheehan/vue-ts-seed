@@ -1,4 +1,4 @@
-import * as Vue from 'vue';
+import Vue from 'vue';
 import App from './layout/app.layout.vue';
 import {sync} from 'vuex-router-sync';
 import router from './router';

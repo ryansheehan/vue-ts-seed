@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "es2015",
         "target": "es5",
         "moduleResolution": "node",
         "isolatedModules": false,
@@ -8,6 +8,7 @@
         "noImplicitAny": true,
         "noImplicitThis": true,
         "strictNullChecks": true,
+        "allowSyntheticDefaultImports": true,
         "lib": [
             "dom",
             "es5",
