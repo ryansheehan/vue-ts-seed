@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import * as Vuex from 'vuex';
+import Vuex from 'vuex';
 import {CounterModule} from './counter.store';
 
 Vue.use(Vuex);
