@@ -1,18 +1,23 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import {CounterModule} from './counter.store';
+import Vue from "vue";
+import Vuex from "vuex";
+import { CounterModule, ICounterState } from "./counter.store";
+//import { AuthModule, IAuthState } from "./auth.store";
 
 Vue.use(Vuex);
 
 interface IRootState {
-
+    counter?: ICounterState
+//    auth?: IAuthState;
 }
 
-const store = new Vuex.Store<IRootState>({
-  modules: {
-    counter: new CounterModule<IRootState>()
-  }
+const store:Vuex.Store<IRootState> = new Vuex.Store<IRootState>({
+    strict: true,
+
+    modules: {
+        counter: new CounterModule<IRootState>(),
+//        auth: new AuthModule<IRootState>(),
+    }
 });
 
 
-export default store;
+export {store as default, IRootState};

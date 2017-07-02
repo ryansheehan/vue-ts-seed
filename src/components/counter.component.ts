@@ -1,15 +1,15 @@
-import Vue from 'vue';
-import { Component, Prop } from 'vue-property-decorator';
+import Vue from "vue";
+import { Component, mapActions, mapState, Prop } from "./vue-class-helpers";
 
-@Component
+@Component({
+    methods: {
+        ...mapActions("counter", ["increment", "decrement"])
+    },
+
+    computed: {
+        ...mapState("counter", ["count"])
+    }
+})
 export default class Counter extends Vue {
 
-  @Prop({required: true})
-  value: number;
-
-  @Prop({required: true})
-  increment: ()=>void;
-
-  @Prop({required: true})
-  decrement: ()=>void;
 }
